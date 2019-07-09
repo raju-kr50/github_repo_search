@@ -1,0 +1,28 @@
+<body class="container-fluid" id="container_body">
+        
+        <div class="section no-pad-bot" id="index-banner">
+          <div class="container">
+            <br><br>
+            <h1 class="header text-center orange-text">Search Github Repository</h1>
+      
+            <div class="text-center">
+              
+                    <input class="pl-5" type="text" [(ngModel)]="repoName" placeholder="Search repositories">
+                    <button (click)="search(repoName)" type="submit" class="btn btn-primary ml-3 btn-sm">Search</button>
+                    <div *ngFor="let repo of ResponseList">
+                      <ul>
+                       <li> {{repo.full_name}} </li>
+                      </ul>  
+                    </div>
+              
+            </div>
+      
+          </div>
+        </div>
+      
+        <!-- Display Results -->
+        <div id="displayRepo">
+      
+      
+      
+        </div>
